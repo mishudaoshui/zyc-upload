@@ -1,4 +1,4 @@
-# welcome to sacan my node demo
+# welcome to scan my node demo
 
 ## 这是node文件上传的小demo
 
