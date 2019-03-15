@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    ul,li{
+      list-style: none;
+      margin:0 30px;
+    }
+  </style>
+</head>
+<body>
+  <div>我是文件夹</div>
+  <ul>
+    <%for(let i=0;i<list.length;i++){%>
+    <li style="float: left;">
+      <div style="width:300px;">
+        <a href="/showPic/<%= list[i].fileName%>"><img style="width:100%;" src="11.jpg" alt=""></a>
+      </div>
+      <div style="text-align:center;"><%= list[i].fileName%></div>
+    </li>
+    <%}%>
+  </ul>
+</body>
+</html>

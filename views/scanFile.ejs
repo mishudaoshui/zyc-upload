@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .clearfix::after{
+      content:'';
+      display: block;
+      clear: both;
+      visibility: hidden;
+      height:0;
+    }
+    .clearfix{
+      zoom:1;
+    }
+    .fl{
+      float:left;
+    }
+    .fr{
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div>我的文件展示</div>
+  <ul class="clearfix">
+    <%for(let i=0;i<list.length;i++){%>
+    <li class="fl"><img src="/<%=list[i]%>" alt=""></li>
+    <%}%>
+  </ul>
+</body>
+</html>

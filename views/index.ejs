@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body,html,div,p,ul,li{
+      margin:0;
+      padding:0;
+    }
+    .title{
+      font-size:28px;
+    }
+    .clearfix::after{
+      content:'';
+      display: block;
+      clear: both;
+      visibility: hidden;
+      height:0;
+    }
+    .clearfix{
+      zoom:1;
+    }
+    .fl{
+      float:left;
+    }
+    .fr{
+      float: right;
+    }
+    .box{
+      padding:15px 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="title">我的相册</div>
+    <form action="/postData" method="post" enctype="multipart/form-data" style="margin-top:30px;">
+      <div class="clearfix">
+        <div class="fl">选择相册路径</div>
+        <div class="fl">
+          <input type="file" name="myfile">
+        </div>
+      </div>
+      <div class="clearfix" style="margin:30px 0;">
+        <div class="fl">选择文件夹</div>
+        <div class="fl">
+          <select name="folder" id="folder">
+            <%for(let i=0;i<list.length;i++){%>
+            <option value="<%=list[i].fileName%>"><%=list[i].fileName%></option>
+            <%}%>
+          </select>
+        </div>
+      </div>
+      <input type="submit" value="提交" class="btn">
+    </form>
+  </div>
+</body>
+</html>

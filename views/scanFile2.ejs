@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>我的文件展示</div>
+  <%for(let i=0;i<list.length;i++){%>
+    <%if(list[i]==='02'){%>
+      <div style="margin-top:30px;font-size:28px;color:red;">暂时没有文件</div>
+    <%}else{%>
+      <div><a href="/<%=list[i]%>"><%=list[i]%></a></div>
+    <%}%>  
+  <%}%>
+</body>
+</html>
